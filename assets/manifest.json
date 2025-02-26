@@ -1,0 +1,22 @@
+{
+  "name": "Fortitude Website",
+  "description": "A collection of tools, services and content by Fortitude Developments.",
+  "keywords": ["Fortitude, Site, Website, Official, Projects, Services, Tools, Content, Free, Cheap, Dev, Developer, Developments"],
+  "author": "Fortitude CEO",
+  "organization": "Fortitude Developments",
+  "url": "https://dev-fortitude.github.io/Site",
+  "security": {
+    "bot_check": true,
+    "proxy_check": true,
+    "vpn_check": true,
+    "tor_check": true
+  },
+  "default_language": "en",
+  "default_theme": "dark",
+  "assets": {
+    "css": "https://dev-fortitude.github.io/Site/assets/styling.css",
+    "js": "https://dev-fortitude.github.io/Site/assets/scripting.js",
+    "manifest": "https://dev-fortitude.github.io/Site/assets/manifest.json",
+    "favicon": "https://dev-fortitude.github.io/Site/assets/branding/favicon.ico"
+  }
+}
