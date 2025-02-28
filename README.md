@@ -34,7 +34,7 @@ There are no experimental features on the website as of yet, please be patient!
 ---
 
 ### Documentation
-Feel free to read through Our official documentation.
+Feel free to read through Our official documentation.  
 [Terms Of Service](https://google.com/404)  
 [Code Of Conduct](https://google.com/404)  
 [Privacy Policy](https://google.com/404)  
