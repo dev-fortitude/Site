@@ -42,6 +42,17 @@ Feel free to read through Our official documentation.
 
 ---
 
+### To-Do List
+- Add website structure
+- Add MetaData & SEO tags to all pages
+- Add CSS StyleSheet
+- Add JS scripting file
+- Add Manifest JSON file
+- Add pre-loader
+- Add homepage
+
+---
+
 ### Suggestions
 If You have any suggestions for the website or want a feature to be added, state it! You can open an issue and explain there or use the contact info below.
 
