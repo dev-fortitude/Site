@@ -45,7 +45,7 @@ Feel free to read through Our official documentation.
 
 ### To-Do List
 - ✅ Add website structure
-- Add MetaData & SEO tags to all pages
+- ✅ Add MetaData & SEO tags to all pages
 - ✅ Add CSS StyleSheet
 - ✅ Add JS scripting file
 - ✅ Add Manifest JSON file
