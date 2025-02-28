@@ -29,7 +29,8 @@ For now, the website doesn't have oauth / login support. This will change in the
 ---
 
 ### Experiments
-There are no experimental features on the website as of yet, please be patient!
+- [FortiChat](https://google.com/404) - Our online chatting platform where Users can communicate with other Users of the site.  
+- [Fortitude AI](https://google.com/404) - Our independent AI that Users can interact with.
 
 ---
 
