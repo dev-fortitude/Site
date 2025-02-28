@@ -1,40 +1,40 @@
-### Statistics
+### 📊 Statistics
 This section will be updated soon!
 
 ---
 
-### About
+### ℹ️ About
 The Fortitude website is a collection of Our projects, services, tools and more. Its goal is to house all of Our public content in one place, making it easily accessible.
 
 ---
 
-### Projects
+### 🧩 Projects
 This list will be updated and will correspond to what's available on the website.
 
 ---
 
-### Services
+### 🔔 Services
 This list will be updated and will correspond to what's available on the website.
 
 ---
 
-### Tools
+### 🧰 Tools
 This list will be updated and will correspond to what's available on the website.
 
 ---
 
-### Accounts
+### 🔒 Accounts
 For now, the website doesn't have oauth / login support. This will change in the near future, please be patient!
 
 ---
 
-### Experiments
+### 🧪 Experiments
 - [FortiChat](https://google.com/404) - Our online chatting platform where Users can communicate with other Users of the site.  
 - [Fortitude AI](https://google.com/404) - Our independent AI that Users can interact with.
 
 ---
 
-### Documentation
+### 📁 Documentation
 Feel free to read through Our official documentation.  
 [Terms Of Service](https://google.com/404)  
 [Code Of Conduct](https://google.com/404)  
@@ -43,7 +43,7 @@ Feel free to read through Our official documentation.
 
 ---
 
-### To-Do List
+### 📝 To-Do List
 - ✅ Add website structure
 - ✅ Add MetaData & SEO tags to all pages
 - ✅ Add CSS StyleSheet
@@ -54,15 +54,15 @@ Feel free to read through Our official documentation.
 
 ---
 
-### Suggestions
+### 💡 Suggestions
 If You have any suggestions for the website or want a feature to be added, state it! You can open an issue and explain there or use the contact info below.
 
 ---
 
-### FAQ
+### ❓ FAQ
 As of now, there are no FAQ's. We'll add some here once We get some!
 
 ---
 
-### Help & Contact
+### 📧 Help & Contact
 Email: developments.fortitude@gmail.com
