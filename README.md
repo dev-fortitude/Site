@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/8249e44b-0508-442b-bd85-34342d287753)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8249e44b-0508-442b-bd85-34342d287753">
+</p>
 
 <details>
   <summary>📊 Statistics</summary>
