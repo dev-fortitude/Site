@@ -33,6 +33,63 @@
     <link rel="manifest" href="https://dev-fortitude.github.io/Site/assets/json/manifest.json">
     <link rel="help" href="https://dev-fortitude.github.io/Site/website/info/documentation.html">
     
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #111111 16%, #0a0f1f);
+            font-family: Arial, sans-serif;
+        }
+        .preloader {
+            text-align: center;
+        }
+        .loader {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: blink 1.4s infinite;
+        }
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes blink {
+            0%, 80%, 100% { opacity: 0; }
+            40% { opacity: 1; }
+        }
+    </style>
+    
+    <body>
+    <div class="preloader">
+        <h4>Checking browser</h4>
+        <p>Verifying You're Human, please wait...</p>
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = "https://dev-fortitude.github.io/Site/website/home.html";
+        }, 3000);
+    </script>
+        
+</body>
+    
     <script>
         fetch('https://dev-fortitude.github.io/Site/assets/json/keywords.json')
         .then(response => response.json())
