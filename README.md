@@ -1,3 +1,5 @@
+<div style="background-color: #141414; color: white; padding: 10px; text-align: center;">
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8249e44b-0508-442b-bd85-34342d287753">
 </p>
@@ -159,3 +161,5 @@
   This includes all static features and integrations.  
   Stage 2 will consist of back-end and dynamic features once stage 1 is complete and the website is usable.  
 </p>
+
+</div>
