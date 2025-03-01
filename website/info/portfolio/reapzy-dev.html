@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <title>Fortitude ⚝ Reapzy Dev's Portfolio</title>
+    <title>Info > Reapzy Devs Portfolio</title>
     <meta name="description" content="Official Fortitude Developments website.">
-    <meta name="keywords" content="HTML5, CSS3, JavaScript, Website, Site, Projects, Services, Tools, Free, Cheap, Download, Content, Database, Fortitude, Dev, Developer, Developers, Developments, Leaders, Promotion, Social, Media, Social Media">
+    <meta name="keywords" content="" id="meta-keywords">
     <meta name="author" content="Fortitude Dev">
     <meta name="organization" content="Fortitude Developments">
     <meta name="robots" content="index, follow">
@@ -28,12 +28,19 @@
     <meta name="scraper-checker" content="enabled">
 
     <link rel="canonical" href="https://dev-fortitude.github.io/Site">
-
-    <link rel="stylesheet" href="https://dev-fortitude.github.io/Site/assets/styling.css">
-
-    <script src="https://dev-fortitude.github.io/Site/assets/scripting.js" defer></script>
-
-    <link rel="manifest" href="https://dev-fortitude.github.io/Site/assets/manifest.json">
-
+    <link rel="stylesheet" href="https://dev-fortitude.github.io/Site/assets/css/styling.css">
+    <script src="https://dev-fortitude.github.io/Site/assets/js/scripting.js" defer></script>
+    <link rel="manifest" href="https://dev-fortitude.github.io/Site/assets/json/manifest.json">
     <link rel="help" href="https://dev-fortitude.github.io/Site/website/info/documentation.html">
+    
+    <script>
+        fetch('https://dev-fortitude.github.io/Site/assets/json/keywords.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('meta-keywords').setAttribute('content', data.keywords.join(', '));
+        })
+        .catch(error => console.error('Error loading keywords:', error));
+    </script>
+    
 </head>
+</html>
