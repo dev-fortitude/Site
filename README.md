@@ -56,6 +56,11 @@ Feel free to read through Our official documentation.
 
 ---
 
+> [!NOTE]
+> The website is currently in stage 1 (front-end) development. This includes all static features and integrations. Stage 2 will consist of back-end and dynamic features once stage 1 is complete and the website is usable.
+
+---
+
 ### 💡 Suggestions
 If You have any suggestions for the website or want a feature to be added, state it! You can open an issue and explain there or use the contact info below.
 
