@@ -1,5 +1,7 @@
 ### 📊 Statistics
-This section will be updated soon!
+![Profile Views](https://komarev.com/ghpvc/?username=dev-fortitude&color=blue)  
+![GitHub latest release downloads](https://img.shields.io/github/downloads/dev-fortitude/Site/latest/total?color=red)  
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/dev-fortitude/Site)
 
 ---
 
