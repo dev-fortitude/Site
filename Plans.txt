@@ -1,0 +1,8 @@
+Background colour: Gradient mix of dark charocal blue and dark purple.
+Body colour: #141414
+In-body colour: #1e1e1e
+Icon colour: White.
+Border colour: Dark charcoal blue.
+Hover, highlight and hyperlink colour: Dark purple
+Scrollbar: Rounded dark purple scroller with transparent background.
+
