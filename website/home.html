@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-bottom: 2px solid white;
+        }
+        .navbar img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .search-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 5px;
+            border-radius: 25px;
+        }
+        .search-bar img {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 10px;
+            flex-grow: 1;
+            border-radius: 25px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 10px;
+            right: 0;
+            text-align: left;
+        }
+        .dropdown-content a {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .dropdown-content a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .dropdown-content a:hover {
+            background-color: gray;
+            border-radius: 5px;
+        }
+        .header-text {
+            margin: 20px 0;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            background-color: #1e1e1e;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .menu-item img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://dev-fortitude.github.io/Site/assets/icons/navigation/home.png" onclick="window.location.href='home.html'" alt="Home">
+        <img src="https://dev-fortitude.github.io/Site/assets/icons/navigation/search.png" onclick="toggleSearch()" alt="Search">
+        <div class="dropdown">
+            <img src="https://dev-fortitude.github.io/Site/assets/icons/navigation/menu.png" onclick="toggleDropdown()" alt="Menu">
+            <div class="dropdown-content" id="dropdown-menu">
+                <a href="#"><img src="#">#</a>
+                <a href="#"><img src="#">#</a>
+                <a href="#"><img src="#">#</a>
+            </div>
+        </div>
+    </div>
+    
+    <h4 class="header-text">Explore</h4>
+    
+    <div class="menu-item" onclick="window.location.href='#'">
+        <img src="#" alt="#">
+        <span>#</span>
+    </div>
+    <div class="menu-item" onclick="window.location.href='#'">
+        <img src="#" alt="#">
+        <span>#</span>
+    </div>
+    <div class="menu-item" onclick="window.location.href='#'">
+        <img src="#" alt="#">
+        <span>#</span>
+    </div>
+    
+    <div class="footer">Fortitude 2025, by Fortitude Developments</div>
+    
+    <div class="search-container" id="search-box">
+        <div class="search-bar">
+            <img src="#" alt="Search">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+    
+    <script>
+        function toggleSearch() {
+            const searchBox = document.getElementById("search-box");
+            searchBox.style.display = (searchBox.style.display === "block") ? "none" : "block";
+        }
+        
+        function toggleDropdown() {
+            const dropdownMenu = document.getElementById("dropdown-menu");
+            dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
