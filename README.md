@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/3ed2d14b-d43f-4f8a-b513-d14efbaec7af)
+<br>
 ### Statistics
 This section will be updated soon, please be patient.
 
