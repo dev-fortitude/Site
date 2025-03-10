@@ -3,6 +3,8 @@
 > [!CAUTION]
 > The website is still being developed. Please report any bugs or issues You encounter so We can fix them!
 
+---
+
 ### About
 The Fortitude Developments website is a collection of services, tools, content and a custom store. It's home to a lot of useful features which You may find interesting. The website is far from finished and has a long way to go. We hope You enjoy Your visit and will want to keep coming back!
 
