@@ -64,6 +64,11 @@ It's very important that You read through some of Our documentation. Of course W
 
 ---
 
+### Showcases
+https://github.com/user-attachments/assets/85bb7aec-50e8-43b0-aac3-881f02fa99dc
+
+---
+
 ### Found A Bug?
 If You found an issue with Our website or anything on there, please open an issue and report it. We provide discounts on services and for the store as a reward / "bug bounty".
 
