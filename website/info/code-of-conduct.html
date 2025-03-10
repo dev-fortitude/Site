@@ -15,9 +15,16 @@
 }
 
 body {
-    background-color: #121212;
+    background: linear-gradient(to bottom right, #141414, #141414, #16213e);
     color: #fff;
-    overflow-x: hidden;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
 }
 
 a {
@@ -143,6 +150,37 @@ a {
 }
 
 .btn:hover {
+    background: #a8a0c5;
+}
+    .rounded-body {
+    width: 98%;
+    max-width: 1400px;
+    min-height: 75vh;
+    padding: 40px;
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #cbc3e3;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.download-btn:hover {
     background: #a8a0c5;
 }
 
@@ -299,6 +337,39 @@ a {
             </li>
         </ul>
     </nav>
+    
+        <div class="rounded-body">
+        <h1>Code Of Conduct</h1>
+
+<p>At Fortitude Developments, We are committed to maintaining the highest standards of honesty, ethics, and fairness in all aspects of Our business. This Code of Conduct outlines Our core values and the expectations We have for Everyone interacting with Our Company.</p>
+<br>
+<br>
+<h3>1. Integrity and Honesty</h3><br>
+<p>We uphold transparency and truthfulness in all Our communications, transactions, and business dealings. We do not engage in deceptive practices and always strive to be fair and honest.</p>
+<br>
+<br>
+<h3>2. Equal Treatment</h3><br>
+<p>We believe in treating Everyone with respect, dignity, and fairness, regardless of race, gender, age, nationality, religion, disability, or any other characteristic. Discrimination, harassment, or unfair treatment will not be tolerated.</p>
+<br>
+<br>
+<h3>3. Ethical Business Practices</h3><br>
+<p>We comply with all applicable laws and regulations and conduct Our business in an ethical manner. Bribery, corruption, or any form of unethical behavior is strictly prohibited.</p>
+<br>
+<br>
+<h3>4. Respect and Inclusion</h3><br>
+<p>We foster an inclusive and welcoming environment where diverse perspectives are valued. Everyone should feel safe, respected, and heard when engaging with Our company.</p>
+<br>
+<br>
+<h3>5. Responsibility and Accountability</h3><br>
+<p>All Employees, Partners, and StakeHolders are responsible for upholding this Code of Conduct. If Anyone witnesses behavior that violates these principles, they are encouraged to report it so appropriate action can be taken.</p>
+<br>
+<br>
+<h4>By interacting with Fortitude Developments, You agree to abide by this Code of Conduct. Together, We can create a positive and ethical environment for Everyone.</h4>
+<br>
+<br>
+<p>For any concerns or questions, please use Our contact info to get in touch.</p>
+        <button class="download-btn" onclick="downloadFile()">Download "Code Of Conduct" file</button>
+    </div>
 
     <footer class="footer">
         <div class="footer-links">
@@ -342,6 +413,17 @@ a {
             }
         });
     });
+    </script>
+    
+        <script>
+    function downloadFile() {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.download = 'file.zip';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
     </script>
 
 </body>

@@ -15,9 +15,16 @@
 }
 
 body {
-    background-color: #121212;
+    background: linear-gradient(to bottom right, #141414, #141414, #16213e);
     color: #fff;
-    overflow-x: hidden;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
 }
 
 a {
@@ -145,6 +152,61 @@ a {
 .btn:hover {
     background: #a8a0c5;
 }
+    .rounded-body {
+    width: 98%;
+    max-width: 1400px;
+    min-height: 75vh;
+    padding: 40px;
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-link img {
+    width: 24px;
+    height: auto;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.icon-link:hover {
+    transform: scale(0.9);
+}
+
+.icon-link:hover::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #a8a0c5;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
 
 .footer {
     background: #1e1e1e;
@@ -156,11 +218,14 @@ a {
     position: fixed;
     width: 100%;
     bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
 }
 
 .footer-links {
     display: flex;
-    gap: 12px;
+    gap: 20px;
 }
 
 .footer-links a {
@@ -175,6 +240,10 @@ a {
 .copyright {
     font-size: 14px;
     opacity: 0.7;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 @media (max-width: 1024px) {
@@ -299,6 +368,70 @@ a {
             </li>
         </ul>
     </nav>
+    
+<div class="rounded-body">
+    <div class="section">
+    <h4>Want to get in contact or stay up to date on Our latest news?</h4>
+    <p>Feel free to follow Us on social media or get in contact using the info below!</p>
+        <br>
+        <br>
+    <div class="section">
+        <h2>Contact</h2>
+        <div class="icons-container">
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/gmail.png" alt="Gmail">
+            </a>
+            <a href="https://outlook.com" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/outlook.png" alt="OutLook">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/sms.png" alt="SMS">
+            </a>
+        </div>
+    </div>
+        
+        <br>
+        <br>
+
+    <div class="section">
+        <h2>Social Media</h2>
+        <div class="icons-container">
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/instagram.png" alt="Instagram">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/threads.png" alt="Threads">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/telegram.png" alt="Telegram">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/twitter.png" alt="Twitter">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/reddit.png" alt="Reddit">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/pinterest.png" alt="Pinterest">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/tiktok.png" alt="TikTok">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/discord.png" alt="Discord">
+            </a>
+            <a href="#" target="_blank" class="icon-link">
+                <img src="https://dev-fortitude.github.io/Website/assets/icons/youtube.png" alt="YouTube">
+            </a>
+        </div>
+    </div>
+</div>
 
     <footer class="footer">
         <div class="footer-links">
@@ -343,6 +476,18 @@ a {
         });
     });
     </script>
-
+    
+        <script>
+    function downloadFile() {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.download = 'file.zip';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    </script>
+<body>
 </body>
+    <html>
 </html>
