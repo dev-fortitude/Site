@@ -6,340 +6,343 @@
     <title>Home</title>
     
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-        transition: all 0.3s ease-in-out;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
 
-    body {
-        background-color: #121212;
-        color: #fff;
-        overflow-x: hidden;
-    }
+body {
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+}
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 50px;
-        background-color: #1e1e1e;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #1e1e1e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
 
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu li a:hover {
+    background-color: #a8a0c5;
+}
+
+.menu li img {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 157%;
+    left: -78px;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    padding: 8px 0;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+.menu li.open > .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown li:hover {
+    background: #a8a0c5;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: -15%;
+    left: -164%;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 280px;
+    padding: 8px 0;
+}
+
+.submenu.show {
+    display: block;
+}
+
+.dropdown li.open > .submenu {
+    display: block;
+}
+
+.dropdown li img, .submenu li img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.hero {
+    height: auto;
+    width: 98%;
+    margin: 80px auto 0;
+    padding: 100px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: url('https://dev-fortitude.github.io/Website/assets/images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.btn {
+    margin-top: 18px;
+    padding: 10px 22px;
+    background: #cbc3e3;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #a8a0c5;
+}
+
+.info-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.info-box {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.info-item {
+    background: #a8a0c5;
+    padding: 25px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.app-download {
+    padding: 80px 40px;
+    text-align: center;
+    background: #1e1e1e;
+}
+
+.app-download h2 {
+    font-size: 32px;
+}
+
+.store-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.store-btn {
+    margin: 0 8px;
+    background: #a8a0c5;
+    padding: 12px 26px;
+    border-radius: 8px;
+}
+
+.store-btn:hover {
+    background: #a8a2ec;
+}
+
+.footer {
+    background: #1e1e1e;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #bbb;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #a8a0c5;
+}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
     .menu {
         display: flex;
-        list-style: none;
-    }
-
-    .menu li {
-        position: relative;
-        margin: 0 15px;
-    }
-
-    .menu li a {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-
-    .menu li a:hover {
-        background-color: #a8a0c5;
-    }
-
-    .menu li img {
-        width: 20px;
-        height: 20px;
-        margin-right: 8px;
-    }
-
-    .dropdown {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: -60px;
-        background: #222;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-        width: 220px;
-        padding: 10px 0;
-    }
-
-    .dropdown.show {
-        display: block;
-    }
-
-    .menu li.open > .dropdown {
-        display: block;
-    }
-
-    .dropdown li {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        border-radius: 10px;
-        cursor: pointer;
-        position: relative;
-    }
-
-    .dropdown li:hover {
-        background: #a8a0c5;
-    }
-
-    .submenu {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: -170%;
-        background: #222;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-        width: 310px;
-        padding: 10px 0;
-    }
-
-    .submenu.show {
-        display: block;
-    }
-
-    .dropdown li.open > .submenu {
-        display: block;
-    }
-
-    .dropdown li img, .submenu li img {
-        width: 18px;
-        height: 18px;
-        margin-right: 8px;
-    }
-
-    .hero {
-        height: auto;
-        padding: 100px 50px 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        background-image: url('https://dev-fortitude.github.io/Website/assets/images/hero-background.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-        margin-bottom: 15px;
-    }
-
-    .hero p {
-        font-size: 18px;
-        opacity: 0.8;
-    }
-
-    .btn {
-        margin-top: 20px;
-        padding: 12px 25px;
-        background: #cbc3e3;
-        color: white;
-        font-size: 18px;
-        border-radius: 10px;
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    .btn:hover {
-        background: #a8a0c5;
-    }
-
-    .info-section {
-        padding: 100px 50px;
-        text-align: center;
-    }
-
-    .info-section h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
     }
 
     .info-box {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 30px;
+        flex-direction: row;
     }
 
     .info-item {
-        background: #a8a0c5;
-        padding: 30px;
-        border-radius: 10px;
         width: 30%;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .app-download {
-        padding: 100px 50px;
-        text-align: center;
-        background: #1e1e1e;
-    }
-
-    .app-download h2 {
-        font-size: 36px;
     }
 
     .store-btns {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .store-btn {
-        margin: 0 10px;
-        background: #a8a0c5;
-        padding: 15px 30px;
-        border-radius: 10px;
-    }
-
-    .store-btn:hover {
-        background: #a8a2ec;
+        flex-direction: row;
+        gap: 18px;
     }
 
     .footer {
-        background: #1e1e1e;
-        padding: 20px 50px;
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 18px;
+        background-color: #1e1e1e;
     }
 
-    .footer-links {
-        display: flex;
-        gap: 15px;
+    .info-box {
+        flex-direction: column;
+        gap: 18px;
     }
 
-    .footer-links a {
-        color: #bbb;
+    .info-item {
+        width: 100%;
+    }
+
+    .store-btns {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 18px;
+        background-color: #1e1e1e;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
         font-size: 14px;
     }
 
-    .footer-links a:hover {
-        color: #a8a0c5;
-    }
-
-    .copyright {
+    .btn {
         font-size: 14px;
-        opacity: 0.7;
+        padding: 8px 18px;
     }
 
-    @media (max-width: 1024px) {
-
-        .menu {
-            display: flex;
-        }
-
-        .info-box {
-            flex-direction: row;
-        }
-
-        .info-item {
-            width: 30%;
-        }
-
-        .store-btns {
-            flex-direction: row;
-            gap: 20px;
-        }
-
-        .footer {
-            flex-direction: row;
-            justify-content: space-between;
-        }
+    .info-section, .app-download {
+        padding: 40px 18px;
     }
 
-    @media (max-width: 768px) {
-
-        .menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 20px;
-            background-color: #1e1e1e;
-        }
-
-        .info-box {
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .info-item {
-            width: 100%;
-        }
-
-        .store-btns {
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .footer {
-            flex-direction: column;
-            gap: 20px;
-        }
+    .store-btns {
+        flex-direction: column;
+        gap: 12px;
     }
 
-    @media (max-width: 480px) {
-
-        .menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 20px;
-            background-color: #1e1e1e;
-        }
-
-        .hero h1 {
-            font-size: 30px;
-        }
-
-        .hero p {
-            font-size: 16px;
-        }
-
-        .btn {
-            font-size: 16px;
-            padding: 10px 20px;
-        }
-
-        .info-section, .app-download {
-            padding: 50px 20px;
-        }
-
-        .store-btns {
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .footer {
-            flex-direction: column;
-            gap: 15px;
-        }
+    .footer {
+        flex-direction: column;
+        gap: 12px;
     }
+}
+
 </style>
 
 </head>

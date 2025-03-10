@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortitude Stresser</title>
+    
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #1e1e1e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu li a:hover {
+    background-color: #a8a0c5;
+}
+
+.menu li img {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 157%;
+    left: -78px;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    padding: 8px 0;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+.menu li.open > .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown li:hover {
+    background: #a8a0c5;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: -15%;
+    left: -164%;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 280px;
+    padding: 8px 0;
+}
+
+.submenu.show {
+    display: block;
+}
+
+.dropdown li.open > .submenu {
+    display: block;
+}
+
+.dropdown li img, .submenu li img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.btn {
+    margin-top: 18px;
+    padding: 10px 22px;
+    background: #cbc3e3;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #a8a0c5;
+}
+
+.footer {
+    background: #1e1e1e;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #bbb;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #a8a0c5;
+}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        display: flex;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 18px;
+        background-color: #1e1e1e;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 18px;
+        background-color: #1e1e1e;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Fortitude</div>
+        <ul class="menu">
+            <li><a href="https://dev-fortitude.github.io/Website/website/home.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/home.png" alt="">Home</a></li>
+            <li><a href="https://dev-fortitude.github.io/Website/website/explore.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/explore.png" alt="">Explore</a></li>
+            <li class="has-dropdown">
+                <a href="#"><img src="https://dev-fortitude.github.io/Website/assets/icons/menu.png" alt="">More</a>
+                <ul class="dropdown">
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)"><img src="https://dev-fortitude.github.io/Website/assets/icons/left-arrow.png" alt=""> Info</a>
+                        <ul class="submenu">
+                            <li><a href="https://dev-fortitude.github.io/Website/website/info/about-us.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/info.png" alt=""> About Us</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/info/our-team.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/info.png" alt=""> Our Team</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/info/terms-of-service.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/info.png" alt=""> Terms Of Service</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/info/code-of-conduct.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/info.png" alt=""> Code Of Conduct</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/info/privacy-policy.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/info.png" alt=""> Privacy Policy</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/info/legal.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/info.png" alt=""> Legal</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/info/contact-and-socials.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/info.png" alt=""> Contact & Socials</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/info/credit.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/info.png" alt=""> Credit</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)"><img src="https://dev-fortitude.github.io/Website/assets/icons/left-arrow.png" alt=""> Services</a>
+                        <ul class="submenu">
+                            <li><a href="https://dev-fortitude.github.io/Website/website/services/social-media-marketing/landing-page.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/services.png" alt=""> SMM Panel</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/services/web-development.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/services.png" alt=""> Web Development</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/services/osint-investigation.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/services.png" alt=""> OSINT Investigation</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/services/playstation.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/services.png" alt=""> PlayStation</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)"><img src="https://dev-fortitude.github.io/Website/assets/icons/left-arrow.png" alt=""> Tools</a>
+                        <ul class="submenu">
+                            <li><a href="https://dev-fortitude.github.io/Website/website/tools/website-source-downloader.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/tools.png" alt=""> Website Source Downloader</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/tools/image/landing-page.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/tools.png" alt=""> Image</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/tools/video/landing-page.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/tools.png" alt=""> Video</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/tools/audio/landing-page.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/tools.png" alt=""> Audio</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/tools/document/landing-page.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/tools.png" alt=""> Document</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)"><img src="https://dev-fortitude.github.io/Website/assets/icons/left-arrow.png" alt=""> Content</a>
+                        <ul class="submenu">
+                            <li><a href="https://dev-fortitude.github.io/Website/website/content/windows/landing-page.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/content.png" alt=""> Windows</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/content/android/landing-page.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/content.png" alt=""> Android</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/content/playstation/landing-page.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/content.png" alt=""> PlayStation</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)"><img src="https://dev-fortitude.github.io/Website/assets/icons/left-arrow.png" alt=""> Entertainment</a>
+                        <ul class="submenu">
+                            <li><a href="https://dev-fortitude.github.io/Website/website/entertainment/download-movies.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/entertainment.png" alt=""> Download Movies</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/entertainment/download-anime.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/entertainment.png" alt=""> Download Anime</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)"><img src="https://dev-fortitude.github.io/Website/assets/icons/left-arrow.png" alt=""> Store</a>
+                        <ul class="submenu">
+                            <li><a href="https://dev-fortitude.github.io/Website/website/store/cheap-license-keys.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/store.png" alt=""> Cheap License Keys</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/store/cheap-subscriptions.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/store.png" alt=""> Cheap Subscriptions</a></li>
+                            <li><a href="https://dev-fortitude.github.io/Website/website/store/root-security-package.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/store.png" alt=""> RootSec Content</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://dev-fortitude.github.io/Website/website/primordial-ai/chat.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/ai.png" alt=""> Primordial AI</a></li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)"><img src="https://dev-fortitude.github.io/Website/assets/icons/left-arrow.png" alt=""> Miscellaneous</a>
+                        <ul class="submenu">
+                            <li><a href="https://dev-fortitude.github.io/Website/website/miscellaneous/fortitude-stresser.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/miscellaneous.png" alt=""> Fortitude Stresser</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://dev-fortitude.github.io/Website/website/account/account-management.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/account.png" alt=""> Account</a></li>
+                    <li><a href="https://dev-fortitude.github.io/Website/website/settings.html"><img src="https://dev-fortitude.github.io/Website/assets/icons/settings.png" alt=""> Settings</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://dev-fortitude.github.io/Website/website/info/terms-of-service.html">Terms Of Service</a>
+            <a href="https://dev-fortitude.github.io/Website/website/info/privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div class="copyright">© Fortitude Developments 2025. All Rights Reserved.</div>
+        <div class="footer-links">
+            <a href="https://dev-fortitude.github.io/Website/website/info/contact-and-socials.html">Get In Contact</a>
+            <a href="https://dev-fortitude.github.io/Website/website/info/useful-links.html">Useful Links</a>
+        </div>
+    </footer>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdownToggle = document.querySelector(".has-dropdown > a");
+        const dropdownMenu = document.querySelector(".dropdown");
+        const submenuItems = document.querySelectorAll(".has-submenu");
+
+        dropdownToggle.addEventListener("click", function (event) {
+            event.stopPropagation();
+            this.parentElement.classList.toggle("open");
+        });
+
+        submenuItems.forEach((item) => {
+            item.addEventListener("click", function (event) {
+                event.stopPropagation();
+                this.classList.toggle("open");
+            });
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!dropdownMenu.contains(event.target) && !dropdownToggle.contains(event.target)) {
+                dropdownMenu.classList.remove("show");
+                document.querySelectorAll(".has-dropdown").forEach((menu) => {
+                    menu.classList.remove("open");
+                    menu.querySelectorAll(".submenu").forEach((submenu) => {
+                        submenu.classList.remove("show");
+                    });
+                });
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>
