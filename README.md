@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/407926cf-e74c-4aa6-8ba0-cb57f78fa3e5)
+
 > [!CAUTION]
 > The website is still being developed. Please report any bugs or issues You encounter so We can fix them!
 
