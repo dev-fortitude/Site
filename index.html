@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Browser...</title>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('https://dev-fortitude.github.io/Website/assets/fonts/boldena.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'CustomFont', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://dev-fortitude.github.io/Website/assets/images/background.jpg') no-repeat center center/cover;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .preloader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .icon {
+            width: 60px;
+            height: auto;
+        }
+
+        h4 {
+            color: #fff;
+            margin-top: 12px;
+            font-size: 22px;
+        }
+
+        p {
+            color: #ddd;
+            font-size: 18px;
+        }
+
+        .provided-by {
+            position: absolute;
+            bottom: 12px;
+            width: 100%;
+            color: #ddd;
+            font-size: 16px;
+        }
+
+        .provided-by a {
+            color: #d8b3ff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .preloader {
+                padding: 20px;
+            }
+
+            .icon {
+                width: 55px;
+            }
+
+            h4 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .provided-by {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <img src="https://dev-fortitude.github.io/Website/assets/icons/shield.png" alt="Shield" class="icon">
+        <h4>Checking Browser</h4>
+        <p>Verifying You're Human, please wait...</p>
+        <div class="provided-by">
+            Provided by <a href="https://github.com/dev-fortitude" target="_blank">Fortitude Developments</a>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = 'https://dev-fortitude.github.io/Website/website/home.html';
+        }, 3000);
+    </script>
+</body>
+</html>
