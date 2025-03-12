@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, select option, a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover, select option:hover, a:hover {
+    color: #e6ccff;
+}
+
+button, select, a, img, svg, video, audio {
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus, select:focus, a:focus, img:focus, svg:focus, video:focus, audio:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button, select, a {
+    cursor: pointer;
+}
